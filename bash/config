@@ -1,2 +1,23 @@
-export PS1="\w$ "
-export EDITOR="mate_wait"
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+export GEM_PRIVATE_KEY='~/.ssh/gem_keys/gem-private_key.pem'
+export GEM_CERTIFICATE_CHAIN='~/.ssh/gem_keys/gem-public_cert.pem'
+
+export EDITOR="mate -w"
+export VISUAL=$EDITOR
+export SVN_EDITOR=$EDITOR
+export GIT_EDITOR=$EDITOR
+
+export CLICOLOR=1
+export LSCOLORS=gxgxcxdxbxegedabagacad
+export CLICOLOR LSCOLORS
+export PAGER=less
+export LESSCHARSET='latin1'
+
+
+function __git_dirty {
+  git diff --quiet HEAD &>/dev/null
+  [ $? == 1 ] && echo "*"
+}
+
+export PS1="\[\033[01;36m\]\u@\h\[\033[01;37m\] \w\[\033[31m\]\$(__git_ps1)\$(__git_dirty)\[\033[00m\] \$ "

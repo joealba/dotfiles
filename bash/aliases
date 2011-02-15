@@ -1,15 +1,29 @@
-. ~/.zsh/aliases
+alias m='mate .'
+alias ls='ls -Al'
+alias r='rails'
 
-# changing directory to code project
-function c { cd ~/code/$1; }
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gwd='git diff --word-diff'
+alias ga='git add'
+alias gss='git status -sb'
 
-# alternative to "rails" command to use templates
-function railsapp {
-  template=$1
-  appname=$2
-  shift 2
-  rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
-}
 
-# misc
+# Handle the fact that this file will be used with multiple OSs
+# platform=`uname`
+# if [[ $platform == 'Linux' ]]; then
+#   alias a='ls -lrth --color'
+# elif [[ $platform == 'Darwin' ]]; then
+#   alias a='ls -lrthG'
+# fi
+
+alias bi='bundle install'
+#alias gg='git lg'
+#alias irb='irb --readline -r irb/completion'
+#alias restart_apache="sudo /etc/init.d/apache2 restart"
+# alias rc='rails console'
+# alias rs='rails server -p 3001'
+
 alias reload='. ~/.bash_profile'
