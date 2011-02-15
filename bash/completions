@@ -1,4 +1,4 @@
-$PREFIX = `brew --prefix`
+PREFIX=`brew --prefix`
 
 if [ -f $PREFIX/etc/bash_completion ]; then
   . $PREFIX/etc/bash_completion
