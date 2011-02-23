@@ -20,4 +20,18 @@ function __git_dirty {
   [ $? == 1 ] && echo "*"
 }
 
-export PS1="\[\033[01;36m\]\u@\h\[\033[01;37m\] \w\[\033[31m\]\$(__git_ps1)\$(__git_dirty)\[\033[00m\] \$ "
+
+hostcolor="01;37m"
+case `hostname` in
+  stuff*)		hostcolor="01;31m" ;;
+  joebook)		hostcolor="01;36m" ;;
+  joealba)		hostcolor="01;34m" ;;
+  *prod.cdc*)	hostcolor="01;32m" ;;
+  *dev.cdc*)	hostcolor="01;31m" ;;
+esac
+
+
+export PS1="\[\033[01;36m\]\u@\[\033[$hostcolor\]\h\[\e[00m\]\] \[\033[00;37m\]\w\[\033[01;33m\]\$(__git_ps1)\$(__git_dirty)\[\033[00m\] \$ "
+
+
+unset hostname hostcolor
