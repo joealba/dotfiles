@@ -1,4 +1,4 @@
-PREFIX=`brew --prefix`
+PREFIX=/usr/local
 
 if [ -f $PREFIX/etc/bash_completion ]; then
   . $PREFIX/etc/bash_completion
@@ -6,11 +6,9 @@ fi
 
 if [ -f $PREFIX/lib/git/contrib/completion/git-completion.bash ]; then
 	source $PREFIX/lib/git/contrib/completion/git-completion.bash
+elif [ -f ~/.bash/completion_scripts/git_completion ]; then
+	source ~/.bash/completion_scripts/git_completion
 fi
-
-# if [ -f ~/.bash/completion_scripts/git_completion ]; then
-# 	source ~/.bash/completion_scripts/git_completion
-# fi
 
 # complete -C ~/.bash/completion_scripts/project_completion -o default c
 # complete -C ~/.bash/completion_scripts/rake_completion -o default rake
