@@ -1,3 +1,6 @@
+## System-wide RVM
+[[ -s /usr/local/lib/rvm ]] && source /usr/local/lib/rvm
+## User RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 export GEM_PRIVATE_KEY='~/.ssh/gem_keys/gem-private_key.pem'
