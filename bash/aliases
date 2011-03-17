@@ -4,6 +4,7 @@ alias r='rails'
 
 alias gs='git status'
 alias gc='git commit'
+alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gwd='git diff --word-diff'
