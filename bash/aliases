@@ -10,6 +10,7 @@ alias gdc='git diff --cached'
 alias gwd='git diff --word-diff'
 alias ga='git add'
 alias gss='git status -sb'
+alias gpom='git push origin master; git push origin master --tags'
 
 # Handle the fact that this file will be used with multiple OSs
 # platform=`uname`
