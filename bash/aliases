@@ -1,4 +1,5 @@
 alias m='mate .'
+alias v='mvim .'
 alias ls='ls -Al'
 alias r='rails'
 

@@ -1,0 +1,94 @@
+" Make Nerd Tree smaller
+let NERDTreeWinSize=16
+
+autocmd VimEnter * wincmd l
+
+" have long lines wrap by defaults
+set wrap
+
+" change line numberings for ease with writing commands
+set relativenumber
+
+"commands :bnext, :bprevious and :buffer won't abandon the buffer until any changes have been written
+set hidden
+
+" fix regexes default regex handling by auto-inserting \v before every REGEX.
+" Now regexs are Ruby compatible
+nnoremap / /\v
+vnoremap / /\v
+
+
+
+
+" <leader> key
+let mapleader = ","
+
+" Map ESC to jj and save my pinky   
+imap jj <ESC>
+
+" Switch between buffers
+noremap <tab> <C-w><C-w>
+" :bd deletes the current buffer (all windows of)
+nmap <leader>d :bd<CR>
+
+" get rid of annoying backup behaviour
+set nobackup
+set nowritebackup
+set noswapfile
+
+" ,a to Ack
+nnoremap <leader>a :Ack 
+
+" Rotating among results in an ack search
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
+
+" ease of use keyboard mappings (why do I care about top/bottom of screen?)
+map H ^
+map L $
+" remap space bar to search
+:nmap <Space> /
+
+" Disable the regular keys to get me on the right track
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Better default behaviour with left and right
+nnoremap j gj
+nnoremap k gk
+
+
+" easier quitting
+" save and close all
+nmap <leader>q :wqa!<CR>
+nmap <leader>w :w!<CR>
+nmap <leader><Esc> :q!<CR>
+
+
+
+" map semicolon to colon
+nnoremap ; :
+
+" Splits  ,v to open a new vertical split and switch to it
+nnoremap <leader>v <C-w>v<C-w>l
+" Move between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Plugin options
+
+" autoclose plugin
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } 
+let g:AutoCloseProtectedRegions = ["Character"] 
+
+" don't need /g after :s or :g
+set gdefault
