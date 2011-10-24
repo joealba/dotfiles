@@ -1,3 +1,8 @@
+if [ -e "$HOME/.aliases" ]; then
+  source "$HOME/.aliases"
+fi
+
+#source ~/.aliases
 source ~/.bash/aliases
 source ~/.bash/completions
 source ~/.bash/paths
