@@ -4,15 +4,21 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 
-# load our own completion functions
-#fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+
+source ~/.zsh/paths
+source ~/.zsh/functions
+source ~/.zsh/completions
+source ~/.zsh/prompt
+
+[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
+
 
 export EDITOR='mate -w'
 
-# vi mode
-#bindkey -v
-#bindkey "^F" vi-cmd-mode
-#bindkey jj vi-cmd-mode
+
 
 # use incremental search
 bindkey "^R" history-incremental-search-backward
@@ -27,29 +33,18 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 #bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-# expand functions in the prompt
-setopt prompt_subst
 
-# prompt
-#export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+setopt complete_in_word
 
-# ignore duplicate history entries
-setopt histignoredups
 
-# keep a bunch of history
-export HISTSIZE=2000
+## HISTORY configs
+HISTFILE=~/.zsh_history
+HISTSIZE=4000
+SAVEHIST=4000
+setopt extendedglob notify
+setopt append_history
+setopt inc_append_history
+setopt COMPLETE_IN_WORD
 
-# automatically pushd
-#setopt auto_pushd
-#export dirstacksize=5
-
-# awesome cd movements from zshkit
-#setopt AUTOCD
-#setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-#setopt cdablevars
-
-# Try to correct command line spelling
-#setopt CORRECT CORRECT_ALL
-
-# Enable extended globbing
-setopt EXTENDED_GLOB
+# Do not correct command line spelling
+unsetopt CORRECT CORRECT_ALL

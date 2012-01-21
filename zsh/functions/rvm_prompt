@@ -1,0 +1,3 @@
+if $(which rvm &> /dev/null)
+  then echo "$(rvm tools identifier)"
+fi
