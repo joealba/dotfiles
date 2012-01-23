@@ -12,13 +12,6 @@ local rvm_ruby='%{$fg[cyan]%}$(rvm_prompt)%{$reset_color%}'
 
 local git_stuff='$(git_dirty) %{$fg[blue]%}$(git_parse_branch)%{$reset_color%}@%{$fg[yellow]%}$(git_head_commit_id)%{$reset_color%}'
 
-#git_prompt() {
-#  local st="$(git status 2>/dev/null)"
-#  if [[ -n "$st" ]]
- #   then echo "${git_stuff}"
- # fi
-#}
-
 
 PROMPT="${user_host} ${current_dir}%{$reset_color%}
 > "

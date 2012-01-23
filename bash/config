@@ -24,13 +24,13 @@ function __git_dirty {
 }
 
 
-hostcolor="01;37m"
+hostcolor="00;37m"
 case `hostname` in
-  stuff*)		hostcolor="01;31m" ;;
-  joebook*)		hostcolor="01;36m" ;;
-  joealba)		hostcolor="01;34m" ;;
-  *prod.cdc*)	hostcolor="01;32m" ;;
-  *dev.cdc*)	hostcolor="01;31m" ;;
+  stuff*)		hostcolor="00;31m" ;;
+  joebook*)		hostcolor="00;36m" ;;
+  joealba)		hostcolor="00;34m" ;;
+  *prod.cdc*)	hostcolor="00;32m" ;;
+  *dev.cdc*)	hostcolor="00;31m" ;;
 esac
 
 
