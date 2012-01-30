@@ -1,7 +1,7 @@
 ## System-wide RVM
 [[ -s /usr/local/lib/rvm ]] && source /usr/local/lib/rvm
 ## User RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 
 fpath=(~/.zsh/functions $fpath)
@@ -12,8 +12,7 @@ source ~/.zsh/paths
 source ~/.zsh/functions
 source ~/.zsh/completions
 source ~/.zsh/prompt
-
-[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases"
+source ~/.aliases
 
 
 export EDITOR='mate -w'

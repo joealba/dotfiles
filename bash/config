@@ -1,7 +1,7 @@
 ## System-wide RVM
 [[ -s /usr/local/lib/rvm ]] && source /usr/local/lib/rvm
 ## User RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 export GEM_PRIVATE_KEY='~/.ssh/gem_keys/gem-private_key.pem'
 export GEM_CERTIFICATE_CHAIN='~/.ssh/gem_keys/gem-public_cert.pem'

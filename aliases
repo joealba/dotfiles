@@ -17,6 +17,7 @@ alias gpom='git push origin master; git push origin master --tags'
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
 alias gap='ga -p'
+alias grh='git reset --hard'
 
 
 # Handle the fact that this file will be used with multiple OSs
