@@ -1,4 +1,4 @@
-alias m='mate .'
+#alias m='mate .'
 alias v='mvim .'
 
 alias ls='ls -Al'
