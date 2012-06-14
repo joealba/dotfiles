@@ -1,8 +1,7 @@
 #alias m='mate .'
-alias v='mvim .'
+#alias v='mvim .'
 
-alias ls='ls -Al'
-alias r='rails'
+alias ls='ls -Alh'
 
 alias gs='git status --short'
 alias gss='git status -sb'
