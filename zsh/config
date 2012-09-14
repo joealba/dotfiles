@@ -30,6 +30,8 @@ bindkey "^N" insert-last-word
 
 setopt complete_in_word
 
+autoload -U select-word-style
+select-word-style bash
 
 ## HISTORY configs
 HISTFILE=~/.zsh_history

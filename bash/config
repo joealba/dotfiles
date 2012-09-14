@@ -38,3 +38,7 @@ export PS1="\[\033[00;36m\]\u@\[\033[$hostcolor\]\h \[\033[00;37m\]\w\[\033[00;3
 
 
 unset hostname hostcolor
+
+export ORACLE_HOME="/usr/local/lib/oracle"
+#export LD_LIBRARY_PATH="/usr/local/lib/oracle"
+export NLS_LANG="en"
