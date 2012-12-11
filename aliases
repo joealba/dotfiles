@@ -12,6 +12,7 @@ alias gdc='git diff --cached'
 alias gwd='git diff --word-diff'
 alias ga='git add'
 alias gpom='git push origin master; git push origin master --tags'
+alias gb='git branch'
 
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
