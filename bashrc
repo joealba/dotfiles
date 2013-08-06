@@ -6,4 +6,4 @@ source ~/.aliases
 # use .localrc for settings specific to one system
 [[ -s ~/.localrc ]] && source ~/.localrc
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
