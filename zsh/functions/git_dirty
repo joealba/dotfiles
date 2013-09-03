@@ -3,7 +3,7 @@ if [[ $st == "" ]]
 then
   echo ""
 else
-  if [[ $st == "nothing to commit (working directory clean)" ]]
+  if [[ $st == "nothing to commit, working directory clean" ]]
   then
     echo "%{$fg[green]%}✔%{$reset_color%}"
   else
