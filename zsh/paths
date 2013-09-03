@@ -1,2 +1,5 @@
-#export PATH="~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH"
+#export PATH="~/bin:/usr/local/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:$MANPATH"
+
+[[ -d /usr/local/opt/groovy/libexec ]] && export GROOVY_HOME = /usr/local/opt/groovy/libexec
+[[ -d /usr/local/opt/grails/libexec ]] && export GRAILS_HOME = /usr/local/opt/grails/libexec

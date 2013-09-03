@@ -30,9 +30,6 @@ alias grh='git reset --hard'
 
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
-alias bi='bundle install'
-#alias irb='irb --readline -r irb/completion'
-alias restart_apache="sudo /usr/local/apache2/bin/apachectl restart"
 alias rc='rails console'
 alias rs='rails server'
 

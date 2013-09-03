@@ -3,7 +3,7 @@ fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
 
-source ~/.zsh/paths
+#source ~/.zsh/paths
 source ~/.zsh/functions
 source ~/.zsh/completions
 source ~/.zsh/prompt
