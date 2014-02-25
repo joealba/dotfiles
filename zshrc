@@ -5,4 +5,4 @@ source ~/.zsh/config
 [[ -f ~/.localrc ]] && . ~/.localrc
 
 #PATH="$HOME/.rvm/bin:/usr/local/bin:$PATH:$HOME/bin:/usr/local/heroku/bin"
-PATH="$PATH:/usr/local/heroku/bin"
+PATH="$PATH:/usr/local/share/npm/bin:/usr/local/heroku/bin"
