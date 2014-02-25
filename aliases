@@ -5,7 +5,7 @@ alias ls='ls -Alh'
 
 alias gs='git status --short'
 alias gss='git status -sb'
-alias gc='git commit'
+alias gc='git commit -e --verbose'
 alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
