@@ -42,3 +42,13 @@
 [core]
   pager = less -r
   mergeoptions = --no-ff --no-commit
+	excludesfile = /Users/joealba/.gitignore_global
+[user]
+	name = Joe Alba
+	email = joe@joealba.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

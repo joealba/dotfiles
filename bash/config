@@ -26,10 +26,12 @@ function __git_dirty {
 
 hostcolor="00;37m"
 case `hostname` in
-  stuff*)		hostcolor="00;31m" ;;
+  stuff*)		  hostcolor="00;31m" ;;
   joebook*)		hostcolor="00;36m" ;;
   joealba)		hostcolor="00;34m" ;;
   *prod.cdc*)	hostcolor="00;32m" ;;
+  ri*prd-*)   hostcolor="00;32m" ;;
+  ri*dev-*)   hostcolor="00;31m" ;;
   *dev.cdc*)	hostcolor="00;31m" ;;
 esac
 
@@ -39,6 +41,6 @@ export PS1="\[\033[00;36m\]\u@\[\033[$hostcolor\]\h \[\033[00;37m\]\w\[\033[00;3
 
 unset hostname hostcolor
 
-export ORACLE_HOME="/usr/local/lib/oracle"
-#export LD_LIBRARY_PATH="/usr/local/lib/oracle"
+export ORACLE_HOME="/usr/local/oracle"
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export NLS_LANG="en"
