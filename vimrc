@@ -208,4 +208,5 @@ endfunction
 map <Leader>w :call OpenURL()<CR>
 
 " https://github.com/tpope/vim-pathogen
-call pathogen#infect()
+" call pathogen#infect()
+
