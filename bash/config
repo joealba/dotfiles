@@ -6,7 +6,7 @@
 export GEM_PRIVATE_KEY='~/.ssh/gem_keys/gem-private_key.pem'
 export GEM_CERTIFICATE_CHAIN='~/.ssh/gem_keys/gem-public_cert.pem'
 
-export EDITOR="vim"
+export EDITOR="emacs"
 export VISUAL="st"
 export SVN_EDITOR=$EDITOR
 export GIT_EDITOR=$EDITOR
