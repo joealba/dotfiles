@@ -18,6 +18,7 @@
   untracked = cyan
 [merge]
 	stat = true
+	conflictstyle = diff3
 [push]
 	default = tracking
 [pull]
