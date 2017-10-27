@@ -10,8 +10,7 @@ source ~/.zsh/prompt
 source ~/.aliases
 
 
-export EDITOR="emacs"
-export VISUAL="st"
+export EDITOR="vim"
 
 
 # use incremental search
