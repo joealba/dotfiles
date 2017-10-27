@@ -1,36 +1,27 @@
-#alias m='mate .'
-#alias v='mvim .'
-
 alias ls='ls -Alh'
 
 alias gs='git status --short'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias ga='git add'
+
 alias gss='git status -sb'
 alias gc='git commit -e --verbose'
 alias gco='git checkout'
-alias gd='git diff'
-alias gdc='git diff --cached'
 alias gwd='git diff --word-diff'
-alias ga='git add'
 alias gpom='git push origin master --tags'
 alias gb='git branch'
+alias gw='git checkout --'
 
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
 alias gap='ga -p'
 alias grh='git reset --hard'
 
-
-# Handle the fact that this file will be used with multiple OSs
-# platform=`uname`
-# if [[ $platform == 'Linux' ]]; then
-#   alias a='ls -lrth --color'
-# elif [[ $platform == 'Darwin' ]]; then
-#   alias a='ls -lrthG'
-# fi
-
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
-alias rc='rails console'
-alias rs='rails server'
 
-alias killracoon='ps -ef | grep racoon | grep -v grep | awk '"'"'{ print $2 }'"'"' | xargs kill'
+alias rap='cd ~/dev/mojotech/autoraptor/autoraptor_app'
+
+alias srtag='git tag `date "+staging-%Y%m%d%H%M%S"`'
+alias prtag='git tag `date "+production-%Y%m%d%H%M%S"`'
