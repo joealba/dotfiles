@@ -45,7 +45,8 @@ def link_file(file)
       new_file.write ERB.new(File.read(file)).result(binding)
     end
   else
-    puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    destination = file =~ /\Abin\z/ ? file : ".#{file}"
+    puts "linking ~/#{destination}"
+    system %Q{ln -s "$PWD/#{file}" "$HOME/#{destination}"}
   end
 end
