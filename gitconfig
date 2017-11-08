@@ -1,30 +1,19 @@
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-	ui = 1
-[color "branch"]
-  current = red reverse
-  local = blue
-  remote = green
-[color "diff"]
-  meta = yellow
-  frag = magenta
-  old = red
-  new = green
-[color "status"]
-  added = yellow
-  changed = red
-  untracked = cyan
+  ui = auto
+[column]
+  ui = auto,dense
+[diff]
+  submodule = log
+  compactionHeuristic = true
+[github]
+  user = joealba
 [merge]
 	stat = true
 	conflictstyle = diff3
 [push]
-	default = tracking
+	default = upstream
 [pull]
   default = current
-[status]
-  submodule = 1
 [alias]
   uncommit = reset --soft HEAD^
   lg = log --graph --pretty=oneline --abbrev-commit
@@ -66,3 +55,7 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[rerere]
+	enabled = 1
+[commit]
+	template = /Users/joealba/.stCommitMsg
