@@ -44,7 +44,7 @@
 [core]
   pager = less -r
   mergeoptions = --no-ff --no-commit
-	excludesfile = /Users/joealba/.gitignore_global
+	excludesfile = /Users/joealba/.gitignore
 [user]
 	name = Joe Alba
 	email = joe@joealba.com
