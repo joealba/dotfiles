@@ -16,6 +16,10 @@
   whitespace = nowarn
 [color]
   ui = auto
+[color "status"]
+  added = yellow
+  changed = red
+  untracked = cyan
 [column]
   ui = auto,dense
 [commit]
