@@ -1,5 +1,6 @@
 source ~/.zshenv
 source ~/.zsh/config
+source ~/.profile
 
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && . ~/.localrc

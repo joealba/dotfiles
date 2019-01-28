@@ -21,7 +21,5 @@ alias grh='git reset --hard'
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
 
-alias rap='cd ~/dev/mojotech/autoraptor/autoraptor_app'
-
 alias srtag='git tag `date "+staging-%Y%m%d%H%M%S"`'
 alias prtag='git tag `date "+production-%Y%m%d%H%M%S"`'
