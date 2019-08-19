@@ -58,7 +58,7 @@
 [push]
   default = upstream
 [rerere]
-  enabled = 1
+  enabled = 0
 [user]
   name = Joe Alba
   email = joe@joealba.com
