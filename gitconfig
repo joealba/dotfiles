@@ -44,8 +44,8 @@
 [interactive]
   diffFilter = diff-highlight
 [merge]
-	stat = true
-	conflictstyle = diff3
+  stat = true
+  conflictstyle = diff3
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
@@ -60,5 +60,5 @@
 [rerere]
   enabled = 1
 [user]
-	name = Joe Alba
-	email = joe@joealba.com
+  name = Joe Alba
+  email = joe@joealba.com
