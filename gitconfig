@@ -22,18 +22,16 @@
   untracked = cyan
 [column]
   ui = auto,dense
-[commit]
-  template = /Users/joealba/.stCommitMsg
 [core]
   pager = less -r
   mergeoptions = --no-ff --no-commit
-  excludesfile = /Users/joealba/.gitignore
+	excludesfile = /Users/joealba/.gitignore
 [diff]
   submodule = log
   compactionHeuristic = true
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -43,17 +41,17 @@
 [gpg]
   program = gpg2
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = diffr
 [merge]
   stat = true
   conflictstyle = diff3
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  log = diffr | less
+  show = diffr | less
+  diff = diffr | less
 [pull]
   default = current
 [push]
