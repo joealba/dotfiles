@@ -6,12 +6,8 @@ alias gdc='git diff --cached'
 alias ga='git add'
 
 alias gss='git status -sb'
-alias gc='git commit -e --verbose'
-alias gco='git checkout'
 alias gwd='git diff --word-diff'
 alias gpom='git push origin master --tags'
-alias gb='git branch'
-alias gw='git checkout --'
 
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
@@ -20,6 +16,3 @@ alias grh='git reset --hard'
 
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
-
-alias srtag='git tag `date "+staging-%Y%m%d%H%M%S"`'
-alias prtag='git tag `date "+production-%Y%m%d%H%M%S"`'
