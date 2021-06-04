@@ -9,6 +9,8 @@ alias gss='git status -sb'
 alias gwd='git diff --word-diff'
 alias gpom='git push origin master --tags'
 
+alias gsall='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c "(echo {} && cd {} && git status -s && echo)" \;'
+
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
 alias gap='ga -p'
