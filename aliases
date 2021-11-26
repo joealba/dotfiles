@@ -18,3 +18,5 @@ alias grh='git reset --hard'
 
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
+
+alias 'shopt=:'
