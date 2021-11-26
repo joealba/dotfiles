@@ -5,3 +5,6 @@ default:
 work:
   :name: Joe Alba
   :email: joe@mojotech.com
+handy:
+  :name: Joe Alba - MojoTech
+  :email: jalba@handy.com

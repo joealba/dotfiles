@@ -55,6 +55,7 @@
   diff = diffr | less
 [pull]
   default = current
+  ff = only
 [push]
   default = upstream
 [rerere]
@@ -62,3 +63,5 @@
 [user]
   name = Joe Alba
   email = joe@joealba.com
+[init]
+  defaultBranch = main
