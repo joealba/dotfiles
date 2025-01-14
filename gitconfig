@@ -1,3 +1,6 @@
+[includeIf "gitdir:~/dev/mojotech/"]
+  path = "~/dev/mojotech/.gitconfig"
+
 [alias]
   uncommit = reset --soft HEAD^
   lg = log --graph --pretty=oneline --abbrev-commit
