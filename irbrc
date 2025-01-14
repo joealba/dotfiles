@@ -1,5 +1,5 @@
 require 'irb/completion'
-require 'irb/ext/save-history'
+#require 'irb/ext/save-history'
 
 ARGV.concat [ "--readline",
               "--prompt-mode",
