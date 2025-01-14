@@ -9,4 +9,4 @@ export NVM_DIR="$HOME/.nvm"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export CDPATH=/Users/joealba/dev/mojotech:/Users/joealba/dev/mojotech/handy/repos
+export CDPATH=/Users/joealba/dev/mojotech
