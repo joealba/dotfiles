@@ -37,9 +37,10 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 [github]
   user = joealba
 [gpg]
@@ -64,7 +65,11 @@
 [rerere]
   enabled = 0
 [user]
-  name = Joe Alba
-  email = joe@joealba.com
+	name = Joe Alba
+	email = joe@joealba.com
 [init]
   defaultBranch = main
+[commit]
+	template = /Users/joealba/.stCommitMsg
+[rebase]
+	updateRefs = true
