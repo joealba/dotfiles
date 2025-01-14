@@ -16,6 +16,8 @@ alias gl='glog --graph'
 alias gap='ga -p'
 alias grh='git reset --hard'
 
+alias gitx='/Applications/SourceTree.app/Contents/Resources/stree'
+
 alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
 
