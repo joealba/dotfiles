@@ -9,7 +9,6 @@
   fl = log -u
   dl = "!git ll -1"
   dlc = diff --cached HEAD^
-  b = branch
   unstage = reset HEAD
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
   # Usage: git track origin/feature-123-login-form
@@ -18,6 +17,8 @@
 	recent = branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\"
 [apply]
   whitespace = nowarn
+[branch]
+  sort = -committerdate
 [color]
   ui = auto
 [color "status"]
@@ -30,12 +31,21 @@
   pager = less -r
   mergeoptions = --no-ff --no-commit
 	excludesfile = /Users/joealba/.gitignore
+	symlinks = true
 [diff]
   submodule = log
   compactionHeuristic = true
+  algorithm = histogram
+  colorMoved = true
+  mnemonicPrefix = true
+  renames = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+[feature]
+  experimental = true
+[fetch]
+  prune = true
+  pruneTags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -43,13 +53,15 @@
 	process = git-lfs filter-process
 [github]
   user = joealba
+[grep]
+  patternType = perl
 [gpg]
   program = gpg2
 [interactive]
   diffFilter = diffr
 [merge]
   stat = true
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -61,15 +73,19 @@
   default = current
   ff = only
 [push]
-  default = upstream
+  default = simple
+  autoSetupRemote = true
+  followTags = true
 [rerere]
   enabled = 0
+[tag]
+  sort = version:refname
 [user]
 	name = Joe Alba
 	email = joe@joealba.com
 [init]
   defaultBranch = main
 [commit]
-	template = /Users/joealba/.stCommitMsg
+  verbose = true
 [rebase]
 	updateRefs = true

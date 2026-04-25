@@ -1,13 +1,32 @@
-source ~/.zshenv
-source ~/.zsh/config
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+source ~/.zsh/functions
+source ~/.zsh/completions
+source ~/.zsh/prompt
+source ~/.aliases
 source ~/.profile
 
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && . ~/.localrc
+export EDITOR="vim"
 
-export PATH="$PATH:/usr/local/share/npm/bin:/usr/local/oracle:/usr/local/heroku/bin"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+bindkey "^R" history-incremental-search-backward
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^P" history-search-backward
+bindkey "^Y" accept-and-hold
+bindkey "^N" insert-last-word
+
+setopt complete_in_word
+autoload -U select-word-style
+select-word-style bash
+
+HISTFILE=~/.zsh_history
+HISTSIZE=4000
+SAVEHIST=4000
+setopt extendedglob notify append_history inc_append_history COMPLETE_IN_WORD
+unsetopt CORRECT CORRECT_ALL
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(direnv hook zsh)"
+
+[[ -f ~/.localrc ]] && . ~/.localrc
