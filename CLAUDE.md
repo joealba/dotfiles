@@ -20,7 +20,7 @@ The Rake task symlinks each top-level file/dir into `$HOME` with a `.` prefix, p
 zshrc → zsh/functions, zsh/completions, zsh/prompt, aliases, profile
 ```
 
-- `zshrc` — the single entry point: loads `zsh/` subfiles, sets EDITOR, keybindings, history options, then loads asdf, direnv, and `~/.localrc`
+- `zshrc` — the single entry point: loads `zsh/` subfiles, sets EDITOR, keybindings, history options, then loads direnv, and `~/.localrc`
 - `profile` — all PATH setup, RVM and NVM loading, `CDPATH`
 - `zsh/functions/` — git prompt helpers autoloaded via `fpath`
 - `zsh/completions` — zsh completion config (`compinit`, `zstyle`)

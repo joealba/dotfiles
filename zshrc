@@ -26,7 +26,6 @@ SAVEHIST=4000
 setopt extendedglob notify append_history inc_append_history COMPLETE_IN_WORD
 unsetopt CORRECT CORRECT_ALL
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(direnv hook zsh)"
 
 [[ -f ~/.localrc ]] && . ~/.localrc
