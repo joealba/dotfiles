@@ -9,7 +9,6 @@ alias ga='git add'
 
 alias gss='git status -sb'
 alias gwd='git diff --word-diff'
-alias gpom='git push origin master --tags'
 
 alias gsall='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c "(echo {} && cd {} && git status -s && echo)" \;'
 
@@ -20,7 +19,4 @@ alias grh='git reset --hard'
 
 alias gitx='/Applications/SourceTree.app/Contents/Resources/stree'
 
-alias trt='touch tmp/restart.txt'
 alias be='bundle exec'
-
-alias 'shopt=:'
