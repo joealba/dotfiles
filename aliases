@@ -1,5 +1,7 @@
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
+alias emacs="emacs -nw"
+
 alias ls='ls -Alh'
 
 alias gs='git status --short'
