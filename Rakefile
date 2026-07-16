@@ -33,6 +33,43 @@ task :install do
   end
 end
 
+desc "symlink agents/skills into ~/.claude/skills and ~/.codex/skills"
+task :install_skills do
+  skills_source = File.join(Dir.pwd, 'agents', 'skills')
+
+  ['.claude', '.codex'].each do |tool_dir|
+    dest_root = File.join(ENV['HOME'], tool_dir, 'skills')
+    system %Q{mkdir -p "#{dest_root}"}
+
+    Dir[File.join(skills_source, '*')].each do |skill_path|
+      name = File.basename(skill_path)
+      destination = File.join(dest_root, name)
+
+      if File.symlink?(destination)
+        if File.readlink(destination) == skill_path
+          puts "identical #{tool_dir}/skills/#{name}"
+        else
+          system %Q{rm "#{destination}"}
+          system %Q{ln -s "#{skill_path}" "#{destination}"}
+          puts "relinking #{tool_dir}/skills/#{name}"
+        end
+      elsif File.exist?(destination)
+        print "overwrite #{tool_dir}/skills/#{name}? [yn] "
+        if $stdin.gets.chomp == 'y'
+          system %Q{rm -rf "#{destination}"}
+          system %Q{ln -s "#{skill_path}" "#{destination}"}
+          puts "linking #{tool_dir}/skills/#{name}"
+        else
+          puts "skipping #{tool_dir}/skills/#{name}"
+        end
+      else
+        system %Q{ln -s "#{skill_path}" "#{destination}"}
+        puts "linking #{tool_dir}/skills/#{name}"
+      end
+    end
+  end
+end
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)
