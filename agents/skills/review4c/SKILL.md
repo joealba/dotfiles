@@ -1,5 +1,5 @@
 ---
-name: review
+name: review4c
 description: Code review using the 4Cs rubric (Correctness, Completeness, Conciseness, Clarity)
 argument-hint: <branch-or-ref> [-- extra instructions]
 allowed-tools: Read Grep Glob Bash(git:*)
